@@ -7,7 +7,7 @@ import PostItem from '../PostItem'
 import Header from "../Header"
 import './index.css'
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min'
-const ZUA_API="https://zui-backendapi.onrender.com"
+const ZUA_API=""
 
 class  PostList extends Component {
   state = { isLoading: true, blogsData: [] }

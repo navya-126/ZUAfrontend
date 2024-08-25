@@ -6,7 +6,7 @@ import Cookies from 'js-cookie'
 import Header from "../Header"
 import './index.css'
 
-const ZUA_API="https://zui-backendapi.onrender.com"
+const ZUA_API=""
 
 class PostItemDetails extends Component {
   state = {blogData:[], isLoading: true}

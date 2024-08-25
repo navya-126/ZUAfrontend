@@ -7,7 +7,7 @@ import RegisterAndLoginHeader from '../RegisterAndLoginHeader'
 
 import './index.css'
 
-const ZUA_API="https://zui-backendapi.onrender.com"
+const ZUA_API=""
 
 class LoginForm extends Component {
   state = {
