@@ -1,0 +1,20 @@
+.blog-list-container {
+    margin-top: 40px;
+
+  }
+  .post-list-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding-left: 0px;
+  }
+
+  .loading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-top: 20px;
+  }
