@@ -6,9 +6,10 @@ import Cookies from 'js-cookie'
 import Header from "../Header"
 import './index.css'
 
-const ZUA_API=""
+
 
 class PostItemDetails extends Component {
+
   state = {blogData:[], isLoading: true}
   componentDidMount() {
     this.getBlogItemDetails()
@@ -19,7 +20,7 @@ class PostItemDetails extends Component {
     const {id} = params
 
     const jwtToken=Cookies.get("jwt_token")
-    const url=`${ZUA_API}/posts/${id}`
+    const url=`${process.env.REACT_APP_API}/posts/${id}`
     const options={
       method: 'GET',
       headers: {
@@ -49,7 +50,7 @@ class PostItemDetails extends Component {
     const {params} = match
     const {id} = params
     const jwtToken=Cookies.get("jwt_token")
-    const url=`${ZUA_API}/posts/${id}`
+    const url=`${process.env.REACT_APP_API}/posts/${id}`
     const options={
       method: 'DELETE',
       headers: {

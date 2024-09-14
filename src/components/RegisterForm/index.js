@@ -4,11 +4,12 @@ import {Link} from 'react-router-dom'
 import RegisterAndLoginHeader from '../RegisterAndLoginHeader'
 import './index.css'
 
-const ZUA_API=""
+
 
 
 
 class RegisterForm extends Component {
+
   state = {
     username: '',
     password: '',
@@ -48,7 +49,7 @@ class RegisterForm extends Component {
     const {username, email, password} = this.state
     Cookie.set('username', username)
     const userDetails = {username, email, password}
-    const url = `${ZUA_API}/register`
+    const url = `${process.env.REACT_APP_API}/register`
 
     const options = {
       method: 'POST',

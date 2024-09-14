@@ -30,7 +30,7 @@ class App extends Component {
 <PostContent.Provider value={{isSignUp,onToggleSignUp:this.onToggleSignUp}}>
 <BrowserRouter>
     <Switch>
-      <Route path="/login" component={LoginForm}/>
+      <Route  path="/login" component={LoginForm}/>
       <Route path="/register" component={RegisterForm}/>      
       <Route exact path="/" component={PostList} />
       <Route exact path="/blogs/:id" component={PostItemDetails} />

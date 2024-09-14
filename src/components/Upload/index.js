@@ -5,9 +5,12 @@ import Cookies from "js-cookie"
 import Header from "../Header"
 import "./index.css"
 
-const ZUA_API="https://zui-backendapi.onrender.com"
+
+
+
 
 const Upload=()=>{
+   
     const [topic,setTopic]=useState("")
     const [title,setTitle]=useState("")
     const [content,setContent]=useState("")
@@ -77,7 +80,7 @@ const Upload=()=>{
         event.preventDefault()
         console.log(topic,title,content,profileUrl,imageUrl)
         const jwtToken=Cookies.get("jwt_token")
-        const url=`${ZUA_API}/posts` 
+        const url=`${process.env.REACT_APP_API}/posts` 
         const options={
             method: 'POST',
             headers: {

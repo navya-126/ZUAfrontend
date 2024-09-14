@@ -1,13 +1,12 @@
 import {Component} from 'react'
 import Cookie from 'js-cookie'
-import {Redirect} from 'react-router-dom'
+
+
 
 
 import RegisterAndLoginHeader from '../RegisterAndLoginHeader'
 
 import './index.css'
-
-const ZUA_API=""
 
 class LoginForm extends Component {
   state = {
@@ -47,7 +46,8 @@ class LoginForm extends Component {
     event.preventDefault()
     const {email, password} = this.state
     const userDetails = {email, password}
-    const url = `${ZUA_API}/login`
+    const url =""
+    console.log(url)
     const options = {
       method: 'POST',
       headers: {
@@ -104,10 +104,7 @@ class LoginForm extends Component {
 
   render() {
     const {showSubmitError, errorMsg} = this.state
-    const jwtToken = Cookie.get('jwt_token')
-    if (jwtToken !== undefined) {
-      return <Redirect to="/" />
-    }
+   
     return (
       <>
         <RegisterAndLoginHeader />
